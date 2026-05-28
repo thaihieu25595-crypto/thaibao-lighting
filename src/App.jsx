@@ -39,15 +39,7 @@ function App() {
             gap: "15px",
           }}
         >
- <img
-  src="https://i.postimg.cc/Vk9J0w6X/logo-thaibao.png"
-  alt="THÁI BẢO-LIGHTING"
-  style={{
-    width: "120px",
-    height: "120px",
-    objectFit: "contain",
-  }}
-/>
+ <img src="https://i.postimg.cc/Vk9J0w6X/logo-thaibao.png" alt="logo" />
 
           <div>
             <h1
