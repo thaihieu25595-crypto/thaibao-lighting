@@ -10,6 +10,20 @@ const menuStyle = {
   fontWeight: "700",
 };
 
+const socialStyle = (bg) => ({
+  width: "55px",
+  height: "55px",
+  borderRadius: "50%",
+  background: bg,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  color: "#fff",
+  textDecoration: "none",
+  fontSize: "24px",
+  fontWeight: "700",
+});
+
 function App() {
   const products = [
     {
@@ -124,7 +138,6 @@ function App() {
           gap: "20px",
         }}
       >
-        {/* LOGO */}
         <div
           style={{
             display: "flex",
@@ -166,7 +179,6 @@ function App() {
           </div>
         </div>
 
-        {/* SEARCH */}
         <div
           style={{
             flex: 1,
@@ -186,7 +198,6 @@ function App() {
           />
         </div>
 
-        {/* HOTLINE */}
         <div
           style={{
             textAlign: "right",
@@ -230,47 +241,20 @@ function App() {
         }}
       >
         <a href="/" style={menuStyle}>🏠</a>
-
-        <a href="/am-tran" style={menuStyle}>
-          ÂM TRẦN ▼
-        </a>
-
-        <a href="/den-tuong" style={menuStyle}>
-          ĐÈN TƯỜNG ▼
-        </a>
-
-        <a href="/den-tha" style={menuStyle}>
-          ĐÈN THẢ ▼
-        </a>
-
-        <a href="/den-chum" style={menuStyle}>
-          ĐÈN CHÙM ▼
-        </a>
-
-        <a href="/mam-op-tran" style={menuStyle}>
-          MÂM-ỐP TRẦN ▼
-        </a>
-
-        <a href="/den-ban" style={menuStyle}>
-          ĐÈN BÀN ▼
-        </a>
-
-        <a href="/quat-tran-den" style={menuStyle}>
-          QUẠT TRẦN ĐÈN ▼
-        </a>
-
-        <a href="/den-soi-tranh" style={menuStyle}>
-          ĐÈN SOI TRANH ▼
-        </a>
+        <a href="/am-tran" style={menuStyle}>ÂM TRẦN ▼</a>
+        <a href="/den-tuong" style={menuStyle}>ĐÈN TƯỜNG ▼</a>
+        <a href="/den-tha" style={menuStyle}>ĐÈN THẢ ▼</a>
+        <a href="/den-chum" style={menuStyle}>ĐÈN CHÙM ▼</a>
+        <a href="/mam-op-tran" style={menuStyle}>MÂM-ỐP TRẦN ▼</a>
+        <a href="/den-ban" style={menuStyle}>ĐÈN BÀN ▼</a>
+        <a href="/quat-tran-den" style={menuStyle}>QUẠT TRẦN ĐÈN ▼</a>
+        <a href="/den-soi-tranh" style={menuStyle}>ĐÈN SOI TRANH ▼</a>
 
         <a
           href="/den-trang-tri"
           style={{
             ...menuStyle,
             background: "#8d450e",
-            height: "56px",
-            display: "flex",
-            alignItems: "center",
             padding: "0 16px",
           }}
         >
@@ -287,11 +271,7 @@ function App() {
       </div>
 
       {/* BANNER */}
-      <div
-        style={{
-          position: "relative",
-        }}
-      >
+      <div style={{ position: "relative" }}>
         <img
           src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop"
           alt="banner"
@@ -344,7 +324,6 @@ function App() {
               fontSize: "20px",
               borderRadius: "8px",
               fontWeight: "700",
-              cursor: "pointer",
             }}
           >
             MUA NGAY
@@ -380,11 +359,9 @@ function App() {
             DANH MỤC CATALOGUE
           </div>
 
-          {/* ĐÈN TRANG TRÍ */}
           <div
             style={{
               padding: "18px 20px",
-              borderBottom: "1px solid #eee",
               fontWeight: "800",
               fontSize: "18px",
             }}
@@ -395,11 +372,7 @@ function App() {
           {denTrangTri.map((item, index) => (
             <a
               key={index}
-              href={`/catalogue/${item
-                .toLowerCase()
-                .replaceAll(" ", "-")}.pdf`}
-              target="_blank"
-              rel="noreferrer"
+              href="#"
               style={{
                 display: "block",
                 padding: "14px 30px",
@@ -412,11 +385,9 @@ function App() {
             </a>
           ))}
 
-          {/* CHIẾU SÁNG */}
           <div
             style={{
               padding: "18px 20px",
-              borderBottom: "1px solid #eee",
               fontWeight: "800",
               fontSize: "18px",
             }}
@@ -427,11 +398,7 @@ function App() {
           {chieuSang.map((item, index) => (
             <a
               key={index}
-              href={`/catalogue/${item
-                .toLowerCase()
-                .replaceAll(" ", "-")}.pdf`}
-              target="_blank"
-              rel="noreferrer"
+              href="#"
               style={{
                 display: "block",
                 padding: "14px 30px",
@@ -444,11 +411,9 @@ function App() {
             </a>
           ))}
 
-          {/* LINH KIỆN */}
           <div
             style={{
               padding: "18px 20px",
-              borderBottom: "1px solid #eee",
               fontWeight: "800",
               fontSize: "18px",
             }}
@@ -459,11 +424,7 @@ function App() {
           {linhKien.map((item, index) => (
             <a
               key={index}
-              href={`/catalogue/${item
-                .toLowerCase()
-                .replaceAll(" ", "-")}.pdf`}
-              target="_blank"
-              rel="noreferrer"
+              href="#"
               style={{
                 display: "block",
                 padding: "14px 30px",
@@ -515,11 +476,7 @@ function App() {
                   }}
                 />
 
-                <div
-                  style={{
-                    padding: "20px",
-                  }}
-                >
+                <div style={{ padding: "20px" }}>
                   <h3>{sp.name}</h3>
 
                   <div
@@ -572,6 +529,192 @@ function App() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* FOOTER */}
+      <div
+        style={{
+          background: "#000",
+          color: "#fff",
+          padding: "60px 40px",
+          marginTop: "60px",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: "60px",
+          }}
+        >
+          <div>
+            <h2
+              style={{
+                color: "yellow",
+                marginBottom: "30px",
+                fontSize: "32px",
+              }}
+            >
+              HỖ TRỢ KHÁCH HÀNG
+            </h2>
+
+            {[
+              "Hướng dẫn mua hàng",
+              "Chính sách thanh toán",
+              "Chính sách bảo hành",
+              "Chính sách vận chuyển",
+              "Chính sách đổi trả",
+            ].map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  padding: "15px 0",
+                  borderBottom: "1px solid #333",
+                  fontSize: "20px",
+                }}
+              >
+                › {item}
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <h2
+              style={{
+                color: "yellow",
+                marginBottom: "30px",
+                fontSize: "32px",
+              }}
+            >
+              CHUYÊN MỤC
+            </h2>
+
+            {[
+              "Tin tức",
+              "Khuyến mãi",
+              "Lắp đặt thực tế",
+              "Hướng dẫn sử dụng",
+            ].map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  padding: "15px 0",
+                  borderBottom: "1px solid #333",
+                  fontSize: "20px",
+                }}
+              >
+                › {item}
+              </div>
+            ))}
+          </div>
+
+          <div>
+            <h2
+              style={{
+                color: "yellow",
+                marginBottom: "30px",
+                fontSize: "32px",
+              }}
+            >
+              VIDEO
+            </h2>
+
+            <iframe
+              width="100%"
+              height="260"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="YouTube video"
+              frameBorder="0"
+              allowFullScreen
+              style={{
+                borderRadius: "10px",
+                border: "none",
+              }}
+            ></iframe>
+
+            <div
+              style={{
+                marginTop: "20px",
+                fontSize: "24px",
+                fontWeight: "700",
+              }}
+            >
+              THÁI BẢO-LIGHTING - Đèn Trang Trí Giá Tốt
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                gap: "18px",
+                marginTop: "25px",
+              }}
+            >
+              <a href="https://facebook.com" style={socialStyle("#1877f2")}>
+                f
+              </a>
+
+              <a href="https://youtube.com" style={socialStyle("red")}>
+                ▶
+              </a>
+
+              <a href="https://tiktok.com" style={socialStyle("#111")}>
+                ♪
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CALL + ZALO */}
+      <div
+        style={{
+          position: "fixed",
+          right: "20px",
+          bottom: "30px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+          zIndex: 9999,
+        }}
+      >
+        <a
+          href="tel:0935351095"
+          style={{
+            width: "78px",
+            height: "78px",
+            borderRadius: "50%",
+            background: "#ff1200",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#fff",
+            fontSize: "38px",
+            textDecoration: "none",
+          }}
+        >
+          📞
+        </a>
+
+        <a
+          href="https://zalo.me/0935351095"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            width: "78px",
+            height: "78px",
+            borderRadius: "50%",
+            background: "#7CFC00",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#0b63ff",
+            fontSize: "24px",
+            fontWeight: "800",
+            textDecoration: "none",
+          }}
+        >
+          Zalo
+        </a>
       </div>
     </div>
   );
