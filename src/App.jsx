@@ -6,45 +6,45 @@ const VANG = "#c9982b";
 const SAN_PHAM = [
   {
     id: 1,
-    tên: "Đèn Hắt Tường Trắng TNT9 – 6W",
-    giá: 104000,
-    giáGốc: 208000,
-    ảnh: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Hắt Tường Trắng TNT9 – 6W",
+    gia: 104000,
+    giaGoc: 208000,
+    anh: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 2,
-    tên: "Đèn Tường Decor TNT2",
-    giá: 226000,
-    giáGốc: 290000,
-    ảnh: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Tường Decor TNT2",
+    gia: 226000,
+    giaGoc: 290000,
+    anh: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 3,
-    tên: "Đèn Hắt Tường Đen TNT8 – 6W",
-    giá: 104000,
-    giáGốc: 208000,
-    ảnh: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Hắt Tường Đen TNT8 – 6W",
+    gia: 104000,
+    giaGoc: 208000,
+    anh: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 4,
-    tên: "Đèn Vách Trụ Tròn Đen",
-    giá: 200000,
-    giáGốc: 260000,
-    ảnh: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Vách Trụ Tròn Đen",
+    gia: 200000,
+    giaGoc: 260000,
+    anh: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 5,
-    tên: "Đèn Vách Xoay Đen",
-    giá: 200000,
-    giáGốc: 260000,
-    ảnh: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Vách Xoay Đen",
+    gia: 200000,
+    giaGoc: 260000,
+    anh: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 6,
-    tên: "Đèn Ngoại Thất Classic",
-    giá: 350000,
-    giáGốc: 455000,
-    ảnh: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+    ten: "Đèn Ngoại Thất Classic",
+    gia: 350000,
+    giaGoc: 455000,
+    anh: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
   },
 ];
 
@@ -135,17 +135,12 @@ export default function App() {
       {/* MENU */}
       <div className="bg-black text-white">
         <div className="max-w-7xl mx-auto flex gap-10 overflow-auto px-6 py-5 text-lg font-semibold">
-
-          <div className="text-yellow-500">
-            ĐÈN TƯỜNG
-          </div>
-
+          <div className="text-yellow-500">ĐÈN TƯỜNG</div>
           <div>ĐÈN THẢ</div>
           <div>ĐÈN CHÙM</div>
           <div>QUẠT TRẦN ĐÈN</div>
           <div>ĐÈN NGOẠI THẤT</div>
           <div>TIN TỨC</div>
-
         </div>
       </div>
 
@@ -176,23 +171,23 @@ export default function App() {
                   className="flex gap-4 p-4 hover:bg-gray-50 transition"
                 >
                   <img
-                    src={sp.ảnh}
-                    alt={sp.tên}
+                    src={sp.anh}
+                    alt={sp.ten}
                     className="w-20 h-20 object-cover rounded-lg"
                   />
 
                   <div className="flex-1">
                     <h4 className="text-sm font-medium line-clamp-2">
-                      {sp.tên}
+                      {sp.ten}
                     </h4>
 
                     <div className="mt-2">
                       <div className="line-through text-gray-400 text-sm">
-                        {fmt(sp.giáGốc)}
+                        {fmt(sp.giaGoc)}
                       </div>
 
                       <div className="text-red-600 font-bold text-xl">
-                        {fmt(sp.giá)}
+                        {fmt(sp.gia)}
                       </div>
                     </div>
                   </div>
@@ -218,8 +213,8 @@ export default function App() {
                   <div className="relative">
 
                     <img
-                      src={sp.ảnh}
-                      alt={sp.tên}
+                      src={sp.anh}
+                      alt={sp.ten}
                       className="w-full h-72 object-cover"
                     />
 
@@ -235,16 +230,16 @@ export default function App() {
                   <div className="p-5">
 
                     <h3 className="font-bold text-xl min-h-[60px]">
-                      {sp.tên}
+                      {sp.ten}
                     </h3>
 
                     <div className="mt-4">
                       <div className="line-through text-gray-400">
-                        {fmt(sp.giáGốc)}
+                        {fmt(sp.giaGoc)}
                       </div>
 
                       <div className="text-red-600 text-3xl font-black">
-                        {fmt(sp.giá)}
+                        {fmt(sp.gia)}
                       </div>
                     </div>
 
@@ -285,7 +280,6 @@ export default function App() {
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-4 gap-14">
 
-          {/* HỖ TRỢ */}
           <div>
             <h3 className="text-3xl font-black text-yellow-400 mb-8">
               HỖ TRỢ KHÁCH HÀNG
@@ -300,7 +294,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* DANH MỤC */}
           <div>
             <h3 className="text-3xl font-black text-yellow-400 mb-8">
               DANH MỤC SẢN PHẨM
@@ -315,7 +308,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* VIDEO */}
           <div>
             <h3 className="text-3xl font-black text-yellow-400 mb-8">
               VIDEO
@@ -342,7 +334,6 @@ export default function App() {
             </a>
           </div>
 
-          {/* GIỚI THIỆU */}
           <div>
 
             <h3 className="text-3xl font-black text-yellow-400 mb-8">
