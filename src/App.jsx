@@ -39,7 +39,10 @@ function App() {
             gap: "15px",
           }}
         >
- <img src="https://i.postimg.cc/Vk9J0w6X/logo-thaibao.png" alt="logo" />
+<img
+  src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+  alt="logo"
+/>
 
           <div>
             <h1
