@@ -1,15 +1,16 @@
+
 import React from "react";
 
 function App() {
   return (
     <div
       style={{
-        fontFamily: "Arial",
+        fontFamily: "Tahoma, Arial, sans-serif",
         background: "#f5f5f5",
         width: "100%",
       }}
     >
-      {/* TOP HEADER */}
+      {/* TOP BAR */}
       <div
         style={{
           background: "#111",
@@ -20,12 +21,12 @@ function App() {
           fontSize: "14px",
         }}
       >
-        <div>THÁI BẢO-LIGHTING - Đèn trang trí giá tốt</div>
+        <div>THÁI BẢO-LIGHTING - Đèn trang trí cao cấp</div>
 
         <div>Hotline: 0935 351 095</div>
       </div>
 
-      {/* MAIN HEADER */}
+      {/* HEADER */}
       <div
         style={{
           background: "#fff",
@@ -41,8 +42,8 @@ function App() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "15px",
-            minWidth: "420px",
+            gap: "20px",
+            minWidth: "500px",
           }}
         >
           <img
@@ -60,9 +61,11 @@ function App() {
               style={{
                 margin: 0,
                 color: "#b67812",
-                fontSize: "52px",
-                fontWeight: "900",
-                lineHeight: "55px",
+                fontSize: "44px",
+                fontWeight: "800",
+                lineHeight: "50px",
+                letterSpacing: "1px",
+                textTransform: "uppercase",
               }}
             >
               THÁI BẢO-LIGHTING
@@ -72,7 +75,7 @@ function App() {
               style={{
                 margin: 0,
                 color: "#555",
-                fontSize: "26px",
+                fontSize: "24px",
               }}
             >
               Chuyên Cung Cấp Đèn Trang Trí
@@ -84,7 +87,7 @@ function App() {
         <div
           style={{
             flex: 1,
-            maxWidth: "700px",
+            maxWidth: "650px",
           }}
         >
           <input
@@ -93,8 +96,8 @@ function App() {
             style={{
               width: "100%",
               padding: "18px",
-              borderRadius: "8px",
               border: "1px solid #ccc",
+              borderRadius: "8px",
               fontSize: "18px",
             }}
           />
@@ -119,8 +122,8 @@ function App() {
           <div
             style={{
               color: "red",
-              fontSize: "40px",
               fontWeight: "900",
+              fontSize: "38px",
             }}
           >
             0935 351 095
@@ -136,8 +139,8 @@ function App() {
           display: "flex",
           gap: "40px",
           padding: "22px 40px",
-          fontSize: "24px",
           fontWeight: "700",
+          fontSize: "22px",
         }}
       >
         <div>ĐÈN TƯỜNG</div>
@@ -148,7 +151,7 @@ function App() {
         <div>TIN TỨC</div>
       </div>
 
-      {/* HERO */}
+      {/* BANNER */}
       <div
         style={{
           position: "relative",
@@ -174,14 +177,15 @@ function App() {
             padding: "60px",
             borderRadius: "16px",
             color: "#fff",
-            width: "70%",
             textAlign: "center",
+            width: "70%",
           }}
         >
           <h2
             style={{
-              fontSize: "76px",
-              marginBottom: "20px",
+              margin: 0,
+              fontSize: "72px",
+              lineHeight: "80px",
             }}
           >
             Kiến trúc không gian sống đẹp
@@ -189,8 +193,8 @@ function App() {
 
           <p
             style={{
-              fontSize: "32px",
-              marginBottom: "35px",
+              fontSize: "30px",
+              marginTop: "20px",
             }}
           >
             Hơn 500 mẫu đèn hiện đại và cao cấp
@@ -198,9 +202,10 @@ function App() {
 
           <button
             style={{
+              marginTop: "20px",
               background: "#c58a11",
-              color: "#fff",
               border: "none",
+              color: "#fff",
               padding: "20px 50px",
               borderRadius: "10px",
               fontSize: "24px",
