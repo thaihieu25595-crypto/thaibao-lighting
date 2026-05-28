@@ -133,14 +133,14 @@ function App() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop"
-          alt="banner"
-          style={{
-            width: "100%",
-            height: "650px",
-            objectFit: "cover",
-          }}
-        />
+  src="https://i.postimg.cc/Vk9J0w6X/logo-thaibao.png"
+  alt="THÁI BẢO-LIGHTING"
+  style={{
+    width: "120px",
+    height: "120px",
+    objectFit: "contain",
+  }}
+/>
 
         <div
           style={{
