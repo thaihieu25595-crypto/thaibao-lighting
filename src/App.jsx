@@ -4,22 +4,16 @@ import React from "react";
 function App() {
   const products = [
     {
-      name: "Đèn Hắt Tường Trắng TNT9",
+      name: "Đèn Hắt Tường TNT9",
       price: "104,000₫",
       image:
         "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
     },
     {
-      name: "Đèn Tường Decor TNT2",
+      name: "Đèn Decor TNT2",
       price: "226,000₫",
       image:
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      name: "Đèn Hắt Tường Đen TNT8",
-      price: "104,000₫",
-      image:
-        "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=800&auto=format&fit=crop",
     },
     {
       name: "Đèn Chùm Luxury",
@@ -27,18 +21,25 @@ function App() {
       image:
         "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop",
     },
-    {
-      name: "Đèn Thả Hiện Đại",
-      price: "860,000₫",
-      image:
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      name: "Đèn Ngoại Thất",
-      price: "540,000₫",
-      image:
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop",
-    },
+  ];
+
+  const catalogues = [
+    "PANASONIC",
+    "GS LIGHTING",
+    "VINALED LIGHTING",
+    "ANFACO LIGHTING",
+    "HUFA LIGHTING",
+    "ACUMEN LIGHTING",
+    "MINH ĐỨC",
+    "KINGLED LIGHTING",
+    "MPE LIGHTING",
+    "KHAPHACO LIGHTING",
+    "PARAGON LIGHTING",
+    "ENA LIGHTING",
+    "TLC LIGHTING",
+    "DUHAL LIGHTING",
+    "PHILIPS",
+    "RẠNG ĐÔNG LIGHTING",
   ];
 
   return (
@@ -60,6 +61,7 @@ function App() {
         }}
       >
         <div>THÁI BẢO-LIGHTING - Đèn trang trí cao cấp</div>
+
         <div>Hotline: 0935 351 095</div>
       </div>
 
@@ -80,7 +82,6 @@ function App() {
             display: "flex",
             alignItems: "center",
             gap: "20px",
-            minWidth: "500px",
           }}
         >
           <img
@@ -98,7 +99,7 @@ function App() {
               style={{
                 margin: 0,
                 color: "#b67812",
-                fontSize: "44px",
+                fontSize: "42px",
                 fontWeight: "800",
                 letterSpacing: "1px",
               }}
@@ -110,7 +111,7 @@ function App() {
               style={{
                 margin: 0,
                 color: "#555",
-                fontSize: "24px",
+                fontSize: "22px",
               }}
             >
               Chuyên Cung Cấp Đèn Trang Trí
@@ -122,7 +123,7 @@ function App() {
         <div
           style={{
             flex: 1,
-            maxWidth: "650px",
+            maxWidth: "600px",
           }}
         >
           <input
@@ -130,10 +131,10 @@ function App() {
             placeholder="Tìm kiếm sản phẩm..."
             style={{
               width: "100%",
-              padding: "18px",
+              padding: "16px",
               border: "1px solid #ccc",
               borderRadius: "8px",
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           />
         </div>
@@ -142,13 +143,12 @@ function App() {
         <div
           style={{
             textAlign: "right",
-            minWidth: "220px",
           }}
         >
           <div
             style={{
               color: "#555",
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           >
             Hỗ trợ khách hàng
@@ -158,7 +158,7 @@ function App() {
             style={{
               color: "red",
               fontWeight: "900",
-              fontSize: "38px",
+              fontSize: "34px",
             }}
           >
             0935 351 095
@@ -173,37 +173,21 @@ function App() {
           color: "#fff",
           display: "flex",
           gap: "30px",
-          padding: "20px 40px",
-          fontSize: "20px",
+          padding: "18px 40px",
           fontWeight: "700",
+          fontSize: "18px",
           overflowX: "auto",
         }}
       >
-        <div>🏠</div>
-        <div>ÂM TRẦN</div>
         <div>ĐÈN TƯỜNG</div>
         <div>ĐÈN THẢ</div>
         <div>ĐÈN CHÙM</div>
-        <div>MÂM-ỐP TRẦN</div>
-        <div>ĐÈN BÀN</div>
-        <div>QUẠT TRẦN ĐÈN</div>
-        <div>ĐÈN SOI TRANH</div>
-
-        <div
-          style={{
-            background: "#8d450e",
-            padding: "8px 14px",
-            borderRadius: "4px",
-          }}
-        >
-          ĐÈN TRANG TRÍ
-        </div>
-
-        <div>ĐÈN NGHỆ THUẬT</div>
+        <div>QUẠT TRẦN</div>
+        <div>ĐÈN NGOẠI THẤT</div>
         <div>TIN TỨC</div>
       </div>
 
-      {/* HERO */}
+      {/* BANNER */}
       <div
         style={{
           position: "relative",
@@ -214,7 +198,7 @@ function App() {
           alt="banner"
           style={{
             width: "100%",
-            height: "700px",
+            height: "650px",
             objectFit: "cover",
           }}
         />
@@ -226,16 +210,16 @@ function App() {
             left: "50%",
             transform: "translate(-50%, -50%)",
             background: "rgba(0,0,0,0.45)",
-            padding: "60px",
-            borderRadius: "16px",
+            padding: "50px",
+            borderRadius: "12px",
+            textAlign: "center",
             color: "#fff",
             width: "70%",
-            textAlign: "center",
           }}
         >
           <h2
             style={{
-              fontSize: "72px",
+              fontSize: "60px",
               margin: 0,
             }}
           >
@@ -244,7 +228,8 @@ function App() {
 
           <p
             style={{
-              fontSize: "30px",
+              fontSize: "28px",
+              marginTop: "20px",
             }}
           >
             Hơn 500 mẫu đèn hiện đại và cao cấp
@@ -252,12 +237,13 @@ function App() {
 
           <button
             style={{
+              marginTop: "20px",
               background: "#c58a11",
-              color: "#fff",
               border: "none",
-              padding: "20px 50px",
-              borderRadius: "10px",
-              fontSize: "24px",
+              color: "#fff",
+              padding: "18px 45px",
+              fontSize: "20px",
+              borderRadius: "8px",
               fontWeight: "700",
               cursor: "pointer",
             }}
@@ -267,13 +253,13 @@ function App() {
         </div>
       </div>
 
-      {/* PRODUCT AREA */}
+      {/* CONTENT */}
       <div
         style={{
-          padding: "40px",
           display: "grid",
-          gridTemplateColumns: "280px 1fr",
+          gridTemplateColumns: "320px 1fr",
           gap: "30px",
+          padding: "40px",
         }}
       >
         {/* SIDEBAR */}
@@ -285,40 +271,36 @@ function App() {
         >
           <div
             style={{
-              background: "#8d450e",
+              background: "#7a3708",
               color: "#fff",
               padding: "18px",
               fontSize: "24px",
-              fontWeight: "700",
+              fontWeight: "800",
             }}
           >
-            DANH MỤC SẢN PHẨM
+            CATALOGUE THIẾT BỊ CHIẾU SÁNG
           </div>
 
-          {[
-            "Đèn trụ cổng",
-            "Sản phẩm bán chạy",
-            "Đèn âm trần",
-            "Quạt trần đèn",
-            "Đèn bàn",
-            "Đèn trang trí",
-            "Đèn tường",
-            "Mâm-Ốp trần",
-            "Đèn soi tranh",
-            "Đèn chùm",
-            "Đèn thả",
-          ].map((item, index) => (
-            <div
+          {catalogues.map((item, index) => (
+            <a
               key={index}
+              href={`/catalogue/${item
+                .toLowerCase()
+                .replaceAll(" ", "-")}.pdf`}
+              target="_blank"
+              rel="noreferrer"
               style={{
-                padding: "16px 18px",
+                display: "block",
+                padding: "16px 20px",
                 borderBottom: "1px solid #eee",
+                color: "#111",
+                textDecoration: "none",
                 fontSize: "18px",
-                background: "#fff",
+                fontWeight: "700",
               }}
             >
               {item}
-            </div>
+            </a>
           ))}
         </div>
 
@@ -326,8 +308,8 @@ function App() {
         <div>
           <h2
             style={{
-              fontSize: "40px",
-              marginBottom: "30px",
+              fontSize: "38px",
+              marginBottom: "25px",
             }}
           >
             Sản phẩm nổi bật
@@ -336,7 +318,7 @@ function App() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: "repeat(3,1fr)",
               gap: "25px",
             }}
           >
@@ -399,8 +381,8 @@ function App() {
                         border: "none",
                         padding: "14px",
                         borderRadius: "6px",
-                        cursor: "pointer",
                         fontWeight: "700",
+                        cursor: "pointer",
                       }}
                     >
                       🛒 GIỎ HÀNG
@@ -414,8 +396,8 @@ function App() {
                         border: "none",
                         padding: "14px",
                         borderRadius: "6px",
-                        cursor: "pointer",
                         fontWeight: "700",
+                        cursor: "pointer",
                       }}
                     >
                       MUA NGAY
