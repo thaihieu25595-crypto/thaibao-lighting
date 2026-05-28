@@ -126,104 +126,114 @@ function App() {
         <div>THÁI BẢO-LIGHTING - Đèn trang trí cao cấp</div>
         <div>Hotline: 0935 351 095</div>
       </div>
+{/* HEADER */}
+<div
+  style={{
+    background: "#fff",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "18px 40px",
+    gap: "30px",
+  }}
+>
+  {/* LOGO */}
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "18px",
+      minWidth: "420px",
+    }}
+  >
+    <img
+      src="https://i.ibb.co/YTVmQgFZ/logo-thaibao.png"
+      alt="THÁI BẢO-LIGHTING"
+      style={{
+        width: "85px",
+        height: "85px",
+        objectFit: "contain",
+      }}
+    />
 
-      {/* HEADER */}
+    <div>
       <div
         style={{
-          background: "#fff",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "20px 40px",
-          gap: "20px",
+          fontSize: "28px",
+          fontWeight: "800",
+          color: "#b67812",
+          lineHeight: "34px",
+          letterSpacing: "1px",
+          whiteSpace: "nowrap",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-          }}
-        >
-          <img
-            src="https://i.ibb.co/YTVmQgFZ/logo-thaibao.png"
-            alt="THÁI BẢO-LIGHTING"
-            style={{
-              width: "120px",
-              height: "120px",
-              objectFit: "contain",
-            }}
-          />
-
-          <div>
-            <h1
-              style={{
-                margin: 0,
-                color: "#b67812",
-                fontSize: "42px",
-                fontWeight: "800",
-              }}
-            >
-              THÁI BẢO-LIGHTING
-            </h1>
-
-            <p
-              style={{
-                margin: 0,
-                color: "#555",
-                fontSize: "22px",
-              }}
-            >
-              Chuyên Cung Cấp Đèn Trang Trí
-            </p>
-          </div>
-        </div>
-
-        <div
-          style={{
-            flex: 1,
-            maxWidth: "600px",
-          }}
-        >
-          <input
-            type="text"
-            placeholder="Tìm kiếm sản phẩm..."
-            style={{
-              width: "100%",
-              padding: "16px",
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              fontSize: "16px",
-            }}
-          />
-        </div>
-
-        <div
-          style={{
-            textAlign: "right",
-          }}
-        >
-          <div
-            style={{
-              color: "#555",
-              fontSize: "16px",
-            }}
-          >
-            Hỗ trợ khách hàng
-          </div>
-
-          <div
-            style={{
-              color: "red",
-              fontWeight: "900",
-              fontSize: "34px",
-            }}
-          >
-            0935 351 095
-          </div>
-        </div>
+        THÁI BẢO-LIGHTING
       </div>
 
+      <div
+        style={{
+          color: "#555",
+          fontSize: "16px",
+          marginTop: "4px",
+        }}
+      >
+        Chuyên Cung Cấp Đèn Trang Trí
+      </div>
+    </div>
+  </div>
+
+  {/* SEARCH */}
+  <div
+    style={{
+      flex: 1,
+      display: "flex",
+      justifyContent: "center",
+    }}
+  >
+    <input
+      type="text"
+      placeholder="Tìm kiếm sản phẩm..."
+      style={{
+        width: "100%",
+        maxWidth: "520px",
+        padding: "15px 18px",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        fontSize: "16px",
+        outline: "none",
+      }}
+    />
+  </div>
+
+  {/* HOTLINE */}
+  <div
+    style={{
+      textAlign: "right",
+      minWidth: "220px",
+    }}
+  >
+    <div
+      style={{
+        color: "#666",
+        fontSize: "15px",
+      }}
+    >
+      Hỗ trợ khách hàng
+    </div>
+
+    <div
+      style={{
+        color: "red",
+        fontSize: "24px",
+        fontWeight: "800",
+        marginTop: "4px",
+        whiteSpace: "nowrap",
+      }}
+    >
+      0935 351 095
+    </div>
+  </div>
+</div>
       {/* MENU */}
       <div
         style={{
