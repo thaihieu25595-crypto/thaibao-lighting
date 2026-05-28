@@ -21,9 +21,38 @@ function App() {
       image:
         "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop",
     },
+    {
+      name: "Đèn Thả Hiện Đại",
+      price: "860,000₫",
+      image:
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Đèn Ngoại Thất",
+      price: "540,000₫",
+      image:
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      name: "Đèn Phòng Ngủ",
+      price: "940,000₫",
+      image:
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop",
+    },
   ];
 
-  const catalogues = [
+  const denTrangTri = [
+    "EUROTO LIGHTING",
+    "NAM LONG LIGHTING",
+    "PTH LIGHTING HOME",
+    "ANRORA LIGHT",
+    "355 LIGHTING",
+    "SANO LIGHTING",
+    "VERONIA LIGHTING",
+    "HUFA LIGHTING",
+  ];
+
+  const chieuSang = [
     "PANASONIC",
     "GS LIGHTING",
     "VINALED LIGHTING",
@@ -42,6 +71,17 @@ function App() {
     "RẠNG ĐÔNG LIGHTING",
   ];
 
+  const linhKien = [
+    "Ổ CẮM ĐIỆN",
+    "APTOMAT",
+    "DÂY ĐIỆN",
+    "CÔNG TẮC",
+    "PHÍCH CẮM",
+    "BÓNG LED",
+    "ĐUI ĐÈN",
+    "NGUỒN LED",
+  ];
+
   return (
     <div
       style={{
@@ -49,7 +89,7 @@ function App() {
         background: "#f5f5f5",
       }}
     >
-      {/* TOP BAR */}
+      {/* TOP */}
       <div
         style={{
           background: "#111",
@@ -61,7 +101,6 @@ function App() {
         }}
       >
         <div>THÁI BẢO-LIGHTING - Đèn trang trí cao cấp</div>
-
         <div>Hotline: 0935 351 095</div>
       </div>
 
@@ -101,7 +140,6 @@ function App() {
                 color: "#b67812",
                 fontSize: "42px",
                 fontWeight: "800",
-                letterSpacing: "1px",
               }}
             >
               THÁI BẢO-LIGHTING
@@ -172,18 +210,39 @@ function App() {
           background: "#111",
           color: "#fff",
           display: "flex",
-          gap: "30px",
-          padding: "18px 40px",
+          alignItems: "center",
+          gap: "28px",
+          padding: "0 40px",
           fontWeight: "700",
           fontSize: "18px",
           overflowX: "auto",
+          height: "56px",
+          whiteSpace: "nowrap",
         }}
       >
-        <div>ĐÈN TƯỜNG</div>
-        <div>ĐÈN THẢ</div>
-        <div>ĐÈN CHÙM</div>
-        <div>QUẠT TRẦN</div>
-        <div>ĐÈN NGOẠI THẤT</div>
+        <div>🏠</div>
+        <div>ÂM TRẦN ▼</div>
+        <div>ĐÈN TƯỜNG ▼</div>
+        <div>ĐÈN THẢ ▼</div>
+        <div>ĐÈN CHÙM ▼</div>
+        <div>MÂM-ỐP TRẦN ▼</div>
+        <div>ĐÈN BÀN ▼</div>
+        <div>QUẠT TRẦN ĐÈN ▼</div>
+        <div>ĐÈN SOI TRANH ▼</div>
+
+        <div
+          style={{
+            background: "#8d450e",
+            padding: "18px 16px",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          ĐÈN TRANG TRÍ ▼
+        </div>
+
+        <div>ĐÈN NGHỆ THUẬT</div>
         <div>TIN TỨC</div>
       </div>
 
@@ -257,7 +316,7 @@ function App() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "320px 1fr",
+          gridTemplateColumns: "340px 1fr",
           gap: "30px",
           padding: "40px",
         }}
@@ -273,15 +332,27 @@ function App() {
             style={{
               background: "#7a3708",
               color: "#fff",
-              padding: "18px",
-              fontSize: "24px",
+              padding: "18px 20px",
+              fontSize: "20px",
               fontWeight: "800",
             }}
           >
-            CATALOGUE THIẾT BỊ CHIẾU SÁNG
+            DANH MỤC CATALOGUE
           </div>
 
-          {catalogues.map((item, index) => (
+          {/* ĐÈN TRANG TRÍ */}
+          <div
+            style={{
+              padding: "18px 20px",
+              borderBottom: "1px solid #eee",
+              fontWeight: "800",
+              fontSize: "18px",
+            }}
+          >
+            📘 CATALOGUE ĐÈN TRANG TRÍ
+          </div>
+
+          {denTrangTri.map((item, index) => (
             <a
               key={index}
               href={`/catalogue/${item
@@ -291,12 +362,74 @@ function App() {
               rel="noreferrer"
               style={{
                 display: "block",
-                padding: "16px 20px",
+                padding: "14px 30px",
+                color: "#444",
                 borderBottom: "1px solid #eee",
-                color: "#111",
                 textDecoration: "none",
-                fontSize: "18px",
-                fontWeight: "700",
+              }}
+            >
+              {item}
+            </a>
+          ))}
+
+          {/* CHIẾU SÁNG */}
+          <div
+            style={{
+              padding: "18px 20px",
+              borderBottom: "1px solid #eee",
+              fontWeight: "800",
+              fontSize: "18px",
+            }}
+          >
+            💡 CATALOGUE THIẾT BỊ CHIẾU SÁNG
+          </div>
+
+          {chieuSang.map((item, index) => (
+            <a
+              key={index}
+              href={`/catalogue/${item
+                .toLowerCase()
+                .replaceAll(" ", "-")}.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "block",
+                padding: "14px 30px",
+                color: "#444",
+                borderBottom: "1px solid #eee",
+                textDecoration: "none",
+              }}
+            >
+              {item}
+            </a>
+          ))}
+
+          {/* LINH KIỆN */}
+          <div
+            style={{
+              padding: "18px 20px",
+              borderBottom: "1px solid #eee",
+              fontWeight: "800",
+              fontSize: "18px",
+            }}
+          >
+            🔧 DỤNG CỤ & LINH KIỆN
+          </div>
+
+          {linhKien.map((item, index) => (
+            <a
+              key={index}
+              href={`/catalogue/${item
+                .toLowerCase()
+                .replaceAll(" ", "-")}.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "block",
+                padding: "14px 30px",
+                color: "#444",
+                borderBottom: "1px solid #eee",
+                textDecoration: "none",
               }}
             >
               {item}
@@ -347,14 +480,7 @@ function App() {
                     padding: "20px",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      minHeight: "60px",
-                    }}
-                  >
-                    {sp.name}
-                  </h3>
+                  <h3>{sp.name}</h3>
 
                   <div
                     style={{
@@ -382,7 +508,6 @@ function App() {
                         padding: "14px",
                         borderRadius: "6px",
                         fontWeight: "700",
-                        cursor: "pointer",
                       }}
                     >
                       🛒 GIỎ HÀNG
@@ -397,7 +522,6 @@ function App() {
                         padding: "14px",
                         borderRadius: "6px",
                         fontWeight: "700",
-                        cursor: "pointer",
                       }}
                     >
                       MUA NGAY
