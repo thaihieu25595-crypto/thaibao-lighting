@@ -1,124 +1,114 @@
 import React from "react";
 
-function App() {
-  const products = [
-    {
-      id: 1,
-      name: "Đèn Hắt Tường Trắng",
-      price: "104.000đ",
-      oldPrice: "208.000đ",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      id: 2,
-      name: "Đèn Tường Decor",
-      price: "226.000đ",
-      oldPrice: "290.000đ",
-      image:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      id: 3,
-      name: "Đèn Ngoại Thất",
-      price: "350.000đ",
-      oldPrice: "455.000đ",
-      image:
-        "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      id: 4,
-      name: "Đèn Chùm Luxury",
-      price: "1.250.000đ",
-      oldPrice: "1.650.000đ",
-      image:
-        "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop"
-    }
-  ];
+const products = [
+  {
+    id: 1,
+    name: "Đèn Hắt Tường Trắng TNT9",
+    price: "104.000đ",
+    old: "198.000đ",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    id: 2,
+    name: "Đèn Tường Decor TNT2",
+    price: "226.000đ",
+    old: "280.000đ",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    id: 3,
+    name: "Đèn Hắt Tường Đen TNT8",
+    price: "104.000đ",
+    old: "198.000đ",
+    image:
+      "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    id: 4,
+    name: "Đèn Ngoại Thất Luxury",
+    price: "369.000đ",
+    old: "457.000đ",
+    image:
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
+  },
+];
 
+function App() {
   return (
     <div
       style={{
         background: "#f5f5f5",
-        minHeight: "100vh",
-        fontFamily: "Arial"
+        fontFamily: "Arial",
       }}
     >
       {/* TOPBAR */}
       <div
         style={{
-          background: "#000",
+          background: "#111",
           color: "#fff",
-          padding: "12px 30px",
-          fontSize: "14px",
+          padding: "8px 40px",
           display: "flex",
           justifyContent: "space-between",
-          flexWrap: "wrap"
+          fontSize: "14px",
         }}
       >
-        <div>🚚 Miễn phí vận chuyển đơn hàng lớn</div>
-        <div>📞 Hotline: 0935 351 095</div>
+        <div>THÁI BẢO LIGHTING - Đèn trang trí cao cấp</div>
+        <div>Hotline: 0935 351 095</div>
       </div>
 
       {/* HEADER */}
       <div
         style={{
           background: "#fff",
-          padding: "25px 30px",
+          padding: "20px 40px",
           display: "flex",
-          justifyContent: "space-between",
           alignItems: "center",
-          flexWrap: "wrap",
+          justifyContent: "space-between",
           gap: "20px",
-          boxShadow: "0 2px 10px rgba(0,0,0,0.05)"
         }}
       >
         <div>
           <h1
             style={{
               margin: 0,
-              color: "#b8860b",
-              fontSize: "42px"
+              fontSize: "48px",
+              color: "#9c5a1a",
+              fontWeight: "bold",
             }}
           >
             THÁI BẢO LIGHTING
           </h1>
 
-          <p
+          <div
             style={{
+              color: "#666",
               marginTop: "5px",
-              color: "#666"
             }}
           >
-            Chuyên cung cấp đèn trang trí cao cấp
-          </p>
+            Cung cấp đèn trang trí chuyên nghiệp
+          </div>
         </div>
 
         <input
-          placeholder="Tìm kiếm sản phẩm..."
+          placeholder="Tìm kiếm..."
           style={{
-            width: "350px",
+            width: "400px",
             padding: "14px",
-            borderRadius: "10px",
-            border: "1px solid #ccc"
+            border: "1px solid #ccc",
+            borderRadius: "6px",
           }}
         />
 
         <div>
-          <div
-            style={{
-              color: "#666",
-              fontSize: "14px"
-            }}
-          >
-            Hỗ trợ khách hàng
-          </div>
+          <div style={{ color: "#666" }}>Hỗ trợ khách hàng</div>
 
           <div
             style={{
               color: "red",
-              fontSize: "28px",
-              fontWeight: "bold"
+              fontWeight: "bold",
+              fontSize: "24px",
             }}
           >
             0935 351 095
@@ -131,11 +121,11 @@ function App() {
         style={{
           background: "#111",
           color: "#fff",
-          padding: "18px 30px",
+          padding: "18px 40px",
           display: "flex",
-          gap: "30px",
+          gap: "35px",
           fontWeight: "bold",
-          flexWrap: "wrap"
+          fontSize: "18px",
         }}
       >
         <div>ĐÈN TƯỜNG</div>
@@ -146,185 +136,194 @@ function App() {
         <div>TIN TỨC</div>
       </div>
 
-      {/* HERO */}
+      {/* MAIN */}
       <div
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "500px",
           display: "flex",
-          alignItems: "center",
-          padding: "60px",
-          color: "#fff",
-          position: "relative"
+          padding: "30px",
+          gap: "30px",
         }}
       >
+        {/* SIDEBAR */}
         <div
           style={{
-            background: "rgba(0,0,0,0.5)",
-            padding: "40px",
-            borderRadius: "20px",
-            maxWidth: "600px"
+            width: "280px",
+            background: "#fff",
+            border: "1px solid #ddd",
           }}
         >
-          <h1
+          <div
             style={{
-              fontSize: "60px",
-              marginBottom: "20px"
-            }}
-          >
-            Kiến tạo không gian sống đẹp
-          </h1>
-
-          <p
-            style={{
-              fontSize: "20px",
-              lineHeight: 1.6
-            }}
-          >
-            Hơn 500 mẫu đèn trang trí hiện đại và cao cấp.
-          </p>
-
-          <button
-            style={{
-              marginTop: "30px",
-              padding: "16px 40px",
-              background: "#b8860b",
+              background: "#7a3e10",
               color: "#fff",
-              border: "none",
-              borderRadius: "12px",
+              padding: "15px",
               fontWeight: "bold",
-              cursor: "pointer",
-              fontSize: "18px"
+              fontSize: "22px",
             }}
           >
-            MUA NGAY
-          </button>
-        </div>
-      </div>
+            DANH MỤC
+          </div>
 
-      {/* PRODUCTS */}
-      <div
-        style={{
-          maxWidth: "1400px",
-          margin: "60px auto",
-          padding: "0 20px"
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "40px"
-          }}
-        >
-          Sản phẩm nổi bật
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
-            gap: "30px"
-          }}
-        >
-          {products.map((item) => (
+          {[
+            "Đèn tường",
+            "Đèn thả",
+            "Đèn chùm",
+            "Đèn bàn",
+            "Đèn trang trí",
+            "Quạt trần",
+            "Đèn ngoại thất",
+            "Đèn LED",
+          ].map((item) => (
             <div
-              key={item.id}
+              key={item}
               style={{
-                background: "#fff",
-                borderRadius: "20px",
-                overflow: "hidden",
-                boxShadow: "0 5px 20px rgba(0,0,0,0.08)"
+                padding: "14px 18px",
+                borderBottom: "1px solid #eee",
+                cursor: "pointer",
               }}
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                style={{
-                  width: "100%",
-                  height: "280px",
-                  objectFit: "cover"
-                }}
-              />
-
-              <div style={{ padding: "20px" }}>
-                <h3>{item.name}</h3>
-
-                <div
-                  style={{
-                    textDecoration: "line-through",
-                    color: "#888",
-                    marginTop: "10px"
-                  }}
-                >
-                  {item.oldPrice}
-                </div>
-
-                <div
-                  style={{
-                    color: "red",
-                    fontWeight: "bold",
-                    fontSize: "32px",
-                    marginTop: "5px"
-                  }}
-                >
-                  {item.price}
-                </div>
-
-                <button
-                  style={{
-                    marginTop: "20px",
-                    width: "100%",
-                    padding: "15px",
-                    background: "#b8860b",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "10px",
-                    fontWeight: "bold",
-                    cursor: "pointer"
-                  }}
-                >
-                  THÊM VÀO GIỎ
-                </button>
-              </div>
+              {item}
             </div>
           ))}
         </div>
-      </div>
 
-      {/* VIDEO */}
-      <div
-        style={{
-          background: "#fff",
-          padding: "60px 20px"
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1000px",
-            margin: "0 auto"
-          }}
-        >
-          <h2
+        {/* CONTENT */}
+        <div style={{ flex: 1 }}>
+          {/* HERO */}
+          <div
             style={{
-              textAlign: "center",
-              marginBottom: "40px",
-              fontSize: "42px"
+              backgroundImage:
+                "url(https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop)",
+              height: "420px",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+              borderRadius: "10px",
+              overflow: "hidden",
             }}
           >
-            VIDEO GIỚI THIỆU
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "rgba(0,0,0,0.45)",
+                display: "flex",
+                alignItems: "center",
+                padding: "60px",
+              }}
+            >
+              <div style={{ color: "#fff", maxWidth: "600px" }}>
+                <h1
+                  style={{
+                    fontSize: "60px",
+                    marginBottom: "20px",
+                  }}
+                >
+                  Kiến tạo không gian sống đẹp
+                </h1>
+
+                <p
+                  style={{
+                    fontSize: "24px",
+                  }}
+                >
+                  Hơn 500 mẫu đèn hiện đại và cao cấp.
+                </p>
+
+                <button
+                  style={{
+                    marginTop: "30px",
+                    background: "#c48b11",
+                    border: "none",
+                    padding: "16px 40px",
+                    color: "#fff",
+                    fontWeight: "bold",
+                    borderRadius: "8px",
+                    fontSize: "18px",
+                  }}
+                >
+                  MUA NGAY
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* PRODUCTS */}
+          <h2
+            style={{
+              marginTop: "40px",
+              marginBottom: "30px",
+              fontSize: "38px",
+            }}
+          >
+            Sản phẩm nổi bật
           </h2>
 
-          <iframe
-            width="100%"
-            height="500"
-            src="https://www.youtube.com/embed?listType=user_uploads&list=thaibao-lighting6754"
-            title="Thai Bao Lighting"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+              gap: "25px",
+            }}
+          >
+            {products.map((item) => (
+              <div
+                key={item.id}
+                style={{
+                  background: "#fff",
+                  border: "1px solid #ddd",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{
+                    width: "100%",
+                    height: "260px",
+                    objectFit: "cover",
+                  }}
+                />
+
+                <div style={{ padding: "20px" }}>
+                  <h3>{item.name}</h3>
+
+                  <div
+                    style={{
+                      textDecoration: "line-through",
+                      color: "#999",
+                    }}
+                  >
+                    {item.old}
+                  </div>
+
+                  <div
+                    style={{
+                      color: "#c40000",
+                      fontSize: "34px",
+                      fontWeight: "bold",
+                      margin: "10px 0",
+                    }}
+                  >
+                    {item.price}
+                  </div>
+
+                  <button
+                    style={{
+                      width: "100%",
+                      background: "#7a3e10",
+                      color: "#fff",
+                      border: "none",
+                      padding: "14px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    THÊM VÀO GIỎ
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -333,64 +332,42 @@ function App() {
         style={{
           background: "#000",
           color: "#fff",
-          padding: "60px 30px",
-          marginTop: "60px"
+          marginTop: "50px",
+          padding: "50px 40px",
         }}
       >
         <div
           style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-            gap: "40px"
+            gap: "40px",
           }}
         >
           <div>
-            <h2 style={{ color: "#b8860b" }}>
-              THÁI BẢO LIGHTING
-            </h2>
-
-            <p>
-              Chuyên cung cấp đèn trang trí và giải pháp chiếu sáng hiện đại.
-            </p>
-
+            <h2 style={{ color: "#c48b11" }}>THÁI BẢO LIGHTING</h2>
             <p>Hotline: 0935 351 095</p>
-
             <p>Facebook: Thái Bảo Lighting</p>
           </div>
 
           <div>
-            <h2 style={{ color: "#b8860b" }}>
-              HỖ TRỢ KHÁCH HÀNG
-            </h2>
-
+            <h2 style={{ color: "#c48b11" }}>HỖ TRỢ</h2>
             <p>Hướng dẫn mua hàng</p>
-            <p>Chính sách vận chuyển</p>
             <p>Chính sách bảo hành</p>
             <p>Chính sách đổi trả</p>
           </div>
 
           <div>
-            <h2 style={{ color: "#b8860b" }}>
-              DANH MỤC
-            </h2>
+            <h2 style={{ color: "#c48b11" }}>VIDEO</h2>
 
-            <p>Đèn tường</p>
-            <p>Đèn thả</p>
-            <p>Đèn chùm</p>
-            <p>Đèn ngoại thất</p>
+            <iframe
+              width="100%"
+              height="200"
+              src="https://www.youtube.com/embed?listType=user_uploads&list=thaibao-lighting6754"
+              title="YouTube"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
           </div>
-        </div>
-
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "40px",
-            color: "#888"
-          }}
-        >
-          © 2026 THÁI BẢO LIGHTING
         </div>
       </div>
     </div>
