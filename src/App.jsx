@@ -1,6 +1,15 @@
 
 import React from "react";
 
+const menuStyle = {
+  color: "#fff",
+  textDecoration: "none",
+  display: "flex",
+  alignItems: "center",
+  height: "56px",
+  fontWeight: "700",
+};
+
 function App() {
   const products = [
     {
@@ -220,30 +229,61 @@ function App() {
           whiteSpace: "nowrap",
         }}
       >
-        <div>🏠</div>
-        <div>ÂM TRẦN ▼</div>
-        <div>ĐÈN TƯỜNG ▼</div>
-        <div>ĐÈN THẢ ▼</div>
-        <div>ĐÈN CHÙM ▼</div>
-        <div>MÂM-ỐP TRẦN ▼</div>
-        <div>ĐÈN BÀN ▼</div>
-        <div>QUẠT TRẦN ĐÈN ▼</div>
-        <div>ĐÈN SOI TRANH ▼</div>
+        <a href="/" style={menuStyle}>🏠</a>
 
-        <div
+        <a href="/am-tran" style={menuStyle}>
+          ÂM TRẦN ▼
+        </a>
+
+        <a href="/den-tuong" style={menuStyle}>
+          ĐÈN TƯỜNG ▼
+        </a>
+
+        <a href="/den-tha" style={menuStyle}>
+          ĐÈN THẢ ▼
+        </a>
+
+        <a href="/den-chum" style={menuStyle}>
+          ĐÈN CHÙM ▼
+        </a>
+
+        <a href="/mam-op-tran" style={menuStyle}>
+          MÂM-ỐP TRẦN ▼
+        </a>
+
+        <a href="/den-ban" style={menuStyle}>
+          ĐÈN BÀN ▼
+        </a>
+
+        <a href="/quat-tran-den" style={menuStyle}>
+          QUẠT TRẦN ĐÈN ▼
+        </a>
+
+        <a href="/den-soi-tranh" style={menuStyle}>
+          ĐÈN SOI TRANH ▼
+        </a>
+
+        <a
+          href="/den-trang-tri"
           style={{
+            ...menuStyle,
             background: "#8d450e",
-            padding: "18px 16px",
-            height: "100%",
+            height: "56px",
             display: "flex",
             alignItems: "center",
+            padding: "0 16px",
           }}
         >
           ĐÈN TRANG TRÍ ▼
-        </div>
+        </a>
 
-        <div>ĐÈN NGHỆ THUẬT</div>
-        <div>TIN TỨC</div>
+        <a href="/den-nghe-thuat" style={menuStyle}>
+          ĐÈN NGHỆ THUẬT
+        </a>
+
+        <a href="/tin-tuc" style={menuStyle}>
+          TIN TỨC
+        </a>
       </div>
 
       {/* BANNER */}
