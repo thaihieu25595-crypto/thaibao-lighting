@@ -64,16 +64,16 @@ function App() {
     },
   ];
 
-  const denTrangTri = [
-    "EUROTO LIGHTING",
-    "NAM LONG LIGHTING",
-    "PTH LIGHTING HOME",
-    "ANRORA LIGHT",
-    "355 LIGHTING",
-    "SANO LIGHTING",
-    "VERONIA LIGHTING",
-    "HUFA LIGHTING",
-  ];
+ const denTrangTri = [
+  { name: "PTH LIGHTING HOME 2026", link: "https://drive.google.com/drive/folders/1Yy6juGhd0UMyzse5B-mREYul-YDel1NG?usp=sharing" },
+  { name: "355 DECOR LIGHTING 2026", link: "https://drive.google.com/drive/folders/1OvVyEI2nryahX0YuqodNqP761crF1C0H?usp=sharing" },
+  { name: "79 LIGHTING 2025", link: "https://drive.google.com/drive/folders/1LyvvlkEgYxkccLMJaEOwlavYvCKKh_R4?usp=sharing" },
+  { name: "HUFA LIGHTING", link: "https://drive.google.com/drive/folders/1tX1IyRviP6lwcXz_E1byaTf0xu6I3gZZ?usp=sharing" },
+  { name: "ANDORA LIGHT", link: "https://drive.google.com/drive/folders/1NMkcD2zUHika4OfAFPZCys8kieMbZOnt?usp=sharing" },
+  { name: "SANO LIGHTING", link: "https://drive.google.com/drive/folders/1d3-tNxtEfFG_q3w4dkwrz059AswUKe_M?usp=sharing" },
+  { name: "VERONIA LIGHTING", link: "https://drive.google.com/drive/folders/1MOUiZyHxua_MyOQTLG5DKIL_rF73GOqN?usp=sharing" },
+  { name: "QVIFA FAN 2026", link: "https://drive.google.com/drive/folders/1UkerlzwNSShFiLHz47K3vrPviHe8qQtI?usp=sharing" }
+];
 
   const chieuSang = [
     "PANASONIC",
@@ -380,21 +380,23 @@ function App() {
           </div>
 
           {denTrangTri.map((item, index) => (
-            <a
-              key={index}
-              href="#"
-              style={{
-                display: "block",
-                padding: "14px 30px",
-                color: "#444",
-                borderBottom: "1px solid #eee",
-                textDecoration: "none",
-              }}
-            >
-              {item}
-            </a>
-          ))}
-
+  <a
+    key={index}
+    href={item.link}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "block",
+      padding: "14px 30px",
+      color: "#444",
+      borderBottom: "1px solid #eee",
+      textDecoration: "none",
+      fontWeight: "600",
+    }}
+  >
+    📘 {item.name}
+  </a>
+))}
           <div
             style={{
               padding: "18px 20px",
