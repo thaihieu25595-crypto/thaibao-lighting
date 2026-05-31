@@ -42,10 +42,10 @@ function App() {
     { name: "ĐÈN TANG TRÍ 355", embedUrl: "https://drive.google.com/file/d/1ErboZhxxQZORl_D53oyYq5roroEG33SL/preview" },
     { name: "HUFA LIGHTING", embedUrl: "https://drive.google.com/file/d/1GExOEbMzQ5kL4CHBPSCuZL6KPOEZgTp6/preview" },
     { name: "QVIFA FAN 2026", embedUrl: "https://drive.google.com/file/d/1utRhIdN947migF7L_5O1Q6ljIKbutABK/preview" },
-    { name: "79 LIGHTING 2025", link: "https://drive.google.com/drive/folders/1LyvvlkEgYxkccLMJaEOwlavYvCKKh_R4?usp=sharing" },
-    { name: "SANO LIGHTING", link: "https://drive.google.com/drive/folders/1d3-tNxtEfFG_q3w4dkwrz059AswUKe_M?usp=sharing" },
-    { name: "PTH LIGHTING HOME 2026", link: "https://drive.google.com/drive/folders/1Yy6juGhd0UMyzse5B-mREYul-YDel1NG?usp=sharing" },
-    { name: "CTL-VIRGO 2024", link: "https://drive.google.com/drive/folders/1xDsOxiKrQJ5Uf2fmNgHo7_U4mOqWh1c?usp=sharing" },
+    { name: "79 LIGHTING 2025", link: "https://drive.google.com/file/d/1A69j4WtwFcipQb9AQ6oGc-10_WzcM3QQ/view?usp=sharing" },
+    { name: "SANO LIGHTING", link: "https://drive.google.com/file/d/1Z2FFPv7fMTP_qE4R64qBaTOrOgjNqz0P/view?usp=sharing" },
+    { name: "PTH LIGHTING HOME 2026", link: "https://drive.google.com/file/d/1RmSDNgPrO5p1C2C3YVkchFjCTddrSMkO/view?usp=sharing" },
+    { name: "CTL-VIRGO 2024", link: "https://drive.google.com/file/d/1XngZt99pMG6_AfBPB3EIIMcSJ5Kdp6dE/view?usp=sharing" },
   ];
 
   const chieuSang = ["PANASONIC","GS LIGHTING","VINALED LIGHTING","ANFACO LIGHTING","HUFA LIGHTING","ACUMEN LIGHTING","MINH ĐỨC","KINGLED LIGHTING","MPE LIGHTING","KHAPHACO LIGHTING","PARAGON LIGHTING","ENA LIGHTING","TLC LIGHTING","DUHAL LIGHTING","PHILIPS","RẠNG ĐÔNG LIGHTING"];
