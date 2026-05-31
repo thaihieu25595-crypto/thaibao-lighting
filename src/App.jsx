@@ -211,7 +211,6 @@ function App() {
             </div>
           ) : (
             <div>
-              <h2 style={{ fontSize: "28px", marginBottom: "20px", color: "#333" }}>Sản phẩm nổi bật</h2>
               {productGroups.map((group, gi) => (
                 <div key={gi} style={{ marginBottom: "24px" }}>
                   <div style={{ background: "#7a3708", color: "#fff", padding: "10px 16px", fontSize: "16px", fontWeight: "800", marginBottom: "12px", borderRadius: "4px" }}>
