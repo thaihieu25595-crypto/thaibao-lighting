@@ -28,13 +28,34 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const isMobile = window.innerWidth <= 768;
 
-  const products = [
-    { name: "Đèn Hắt Tường TNT9", price: "104,000₫", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
-    { name: "Đèn Decor TNT2", price: "226,000₫", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" },
-    { name: "Đèn Chùm Luxury", price: "1,250,000₫", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" },
-    { name: "Đèn Thả Hiện Đại", price: "860,000₫", image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop" },
-    { name: "Đèn Ngoại Thất", price: "540,000₫", image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop" },
-    { name: "Đèn Phòng Ngủ", price: "940,000₫", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" },
+  const productGroups = [
+    {
+      title: "✨ ĐÈN CHÙM",
+      items: [
+        { name: "Đèn Chùm Pha Lê Crystal", price: "4,850,000₫", image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Chùm Cổ Điển Luxury", price: "1,250,000₫", image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Chùm Thông Tầng", price: "12,500,000₫", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Chùm Hoa Lily 8 tay", price: "2,099,000₫", image: "https://images.unsplash.com/photo-1513506003901-1e6a35f09b15?q=80&w=800&auto=format&fit=crop" },
+      ],
+    },
+    {
+      title: "💡 ĐÈN THẢ",
+      items: [
+        { name: "Đèn Thả Nordic Tối Giản", price: "860,000₫", image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Thả Giếng Trời", price: "4,500,000₫", image: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Thả Decor Gold", price: "2,625,000₫", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Thả Pha Lê Vuông", price: "2,552,000₫", image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop" },
+      ],
+    },
+    {
+      title: "🔆 ĐÈN ỐP TRẦN",
+      items: [
+        { name: "Đèn Mâm Hiện Đại MHĐ17", price: "803,000₫", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Ốp Trần Tròn OT19", price: "419,000₫", image: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Ốp Trần Decor MHĐ45", price: "2,249,000₫", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
+        { name: "Đèn Mâm Hoa Sen 16 cánh", price: "2,363,000₫", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" },
+      ],
+    },
   ];
 
   const denTrangTri = [
@@ -119,8 +140,8 @@ function App() {
               <span>📂 DANH MỤC CATALOGUE</span><span>{sidebarOpen ? "▲" : "▼"}</span>
             </button>
           )}
-          {(!isMobile || sidebarOpen) && <div style={{ background: "#7a3708", color: "#fff", padding: "18px 20px", fontSize: "20px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>}
-          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px" }}>📘 CATALOGUE ĐÈN TRANG TRÍ</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ background: "#7a3708", color: "#fff", padding: "36px 40px", fontSize: "40px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "36px 40px", fontWeight: "800", fontSize: "36px" }}>📘 CATALOGUE ĐÈN TRANG TRÍ</div>}
           {(!isMobile || sidebarOpen) && denTrangTri.map((item, index) => (
             <div
               key={index}
@@ -134,28 +155,29 @@ function App() {
               }}
               style={{
                 display: "block",
-                padding: "14px 30px",
+                padding: "28px 60px",
                 color: item.embedUrl ? "#1a56db" : "#444",
                 borderBottom: "1px solid #eee",
                 cursor: "pointer",
                 fontWeight: "600",
+                fontSize: "28px",
                 background: selectedCatalogue && selectedCatalogue.name === item.name ? "#fff3e0" : "transparent",
-                borderLeft: selectedCatalogue && selectedCatalogue.name === item.name ? "4px solid #c58a11" : "4px solid transparent",
+                borderLeft: selectedCatalogue && selectedCatalogue.name === item.name ? "8px solid #c58a11" : "8px solid transparent",
               }}
             >
               {item.embedUrl ? "📖" : "🔗"} {item.name}
-              {!item.embedUrl && <span style={{ fontSize: "11px", color: "#999", marginLeft: "8px" }}>(đang cập nhật)</span>}
+              {!item.embedUrl && <span style={{ fontSize: "22px", color: "#999", marginLeft: "12px" }}>(đang cập nhật)</span>}
             </div>
           ))}
 
-          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>💡 CATALOGUE CHIẾU SÁNG</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "36px 40px", fontWeight: "800", fontSize: "36px", marginTop: "10px" }}>💡 CATALOGUE CHIẾU SÁNG</div>}
           {(!isMobile || sidebarOpen) && chieuSang.map((item, index) => (
-            <a key={index} href="#" style={{ display: "block", padding: "14px 30px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none" }}>{item}</a>
+            <a key={index} href="#" style={{ display: "block", padding: "28px 60px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none", fontSize: "28px" }}>{item}</a>
           ))}
 
-          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>🔧 DỤNG CỤ & LINH KIỆN</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "36px 40px", fontWeight: "800", fontSize: "36px", marginTop: "10px" }}>🔧 DỤNG CỤ & LINH KIỆN</div>}
           {(!isMobile || sidebarOpen) && linhKien.map((item, index) => (
-            <a key={index} href="#" style={{ display: "block", padding: "14px 30px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none" }}>{item}</a>
+            <a key={index} href="#" style={{ display: "block", padding: "28px 60px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none", fontSize: "28px" }}>{item}</a>
           ))}
         </div>
 
@@ -184,22 +206,29 @@ function App() {
             </div>
           ) : (
             <div>
-              <h2 style={{ fontSize: "38px", marginBottom: "25px" }}>Sản phẩm nổi bật</h2>
-              <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,1fr)", gap: isMobile ? "12px" : "25px" }}>
-                {products.map((sp, index) => (
-                  <div key={index} style={{ background: "#fff", border: "1px solid #ddd", borderRadius: "8px", overflow: "hidden" }}>
-                    <img src={sp.image} alt={sp.name} style={{ width: "100%", height: "320px", objectFit: "cover" }} />
-                    <div style={{ padding: "20px" }}>
-                      <h3>{sp.name}</h3>
-                      <div style={{ color: "#c00", fontWeight: "700", fontSize: "30px", marginBottom: "20px" }}>{sp.price}</div>
-                      <div style={{ display: "flex", gap: "10px" }}>
-                        <button style={{ flex: 1, background: "#111", color: "#fff", border: "none", padding: "14px", borderRadius: "6px", fontWeight: "700" }}>🛒 GIỎ HÀNG</button>
-                        <button style={{ flex: 1, background: "#c58a11", color: "#fff", border: "none", padding: "14px", borderRadius: "6px", fontWeight: "700" }}>MUA NGAY</button>
-                      </div>
-                    </div>
+              <h2 style={{ fontSize: "28px", marginBottom: "20px", color: "#333" }}>Sản phẩm nổi bật</h2>
+              {productGroups.map((group, gi) => (
+                <div key={gi} style={{ marginBottom: "24px" }}>
+                  <div style={{ background: "#7a3708", color: "#fff", padding: "10px 16px", fontSize: "16px", fontWeight: "800", marginBottom: "12px", borderRadius: "4px" }}>
+                    {group.title}
                   </div>
-                ))}
-              </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+                    {group.items.map((sp, index) => (
+                      <div key={index} style={{ background: "#fff", border: "1px solid #ddd", borderRadius: "6px", overflow: "hidden" }}>
+                        <img src={sp.image} alt={sp.name} style={{ width: "100%", height: "130px", objectFit: "cover" }} />
+                        <div style={{ padding: "10px" }}>
+                          <div style={{ fontSize: "13px", fontWeight: "600", marginBottom: "6px", lineHeight: "1.3" }}>{sp.name}</div>
+                          <div style={{ color: "#c00", fontWeight: "700", fontSize: "14px", marginBottom: "8px" }}>{sp.price}</div>
+                          <div style={{ display: "flex", gap: "6px" }}>
+                            <button style={{ flex: 1, background: "#111", color: "#fff", border: "none", padding: "7px 4px", borderRadius: "4px", fontWeight: "700", fontSize: "11px", cursor: "pointer" }}>🛒 GIỎ</button>
+                            <button style={{ flex: 1, background: "#c58a11", color: "#fff", border: "none", padding: "7px 4px", borderRadius: "4px", fontWeight: "700", fontSize: "11px", cursor: "pointer" }}>MUA</button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>
