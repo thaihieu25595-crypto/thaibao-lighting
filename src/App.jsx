@@ -63,7 +63,7 @@ function App() {
     { name: "SLISTER A 2024", embedUrl: "https://drive.google.com/file/d/1XXHxGtK8tIIbNSZRucvxhdnyEboLJ8Bq/preview" },
     { name: "ANDORA LIGHT 2025", embedUrl: "https://drive.google.com/file/d/1e9CwAhTaAWgy-EWe9vnnR4y802OB4CYU/preview" },
     { name: "VERONIA LIGHTING 2026", embedUrl: "https://drive.google.com/file/d/15zo5zQPDJcH9RIFCtA9x4ATTsGM9lwk6/preview" },
-    { name: "ĐÈN TANG TRÍ 355", embedUrl: "https://drive.google.com/file/d/1ErboZhxxQZORl_D53oyYq5roroEG33SL/preview" },
+    { name: "ĐÈN TRANG TRÍ 355", embedUrl: "https://drive.google.com/file/d/1ErboZhxxQZORl_D53oyYq5roroEG33SL/preview" },
     { name: "HUFA LIGHTING", embedUrl: "https://drive.google.com/file/d/1GExOEbMzQ5kL4CHBPSCuZL6KPOEZgTp6/preview" },
     { name: "QVIFA FAN 2026", embedUrl: "https://drive.google.com/file/d/1utRhIdN947migF7L_5O1Q6ljIKbutABK/preview" },
     { name: "79 LIGHTING 2025", link: "https://drive.google.com/file/d/1A69j4WtwFcipQb9AQ6oGc-10_WzcM3QQ/view?usp=sharing" },
@@ -138,10 +138,10 @@ function App() {
         <div style={{ background: "#fff", border: "1px solid #ddd" }}>
           {isMobile && (
             <button onClick={() => setSidebarOpen(o => !o)} style={{ width: "100%", background: "#7a3708", color: "#fff", padding: "13px 16px", fontSize: "15px", fontWeight: "800", border: "none", display: "flex", justifyContent: "space-between", cursor: "pointer" }}>
-              <span>📂 DANH MỤC CATALOGUE</span><span>{sidebarOpen ? "▲" : "▼"}</span>
+              <span>📂 DANH MỤC SẢN PHẨM</span><span>{sidebarOpen ? "▲" : "▼"}</span>
             </button>
           )}
-          {(!isMobile || sidebarOpen) && <div style={{ background: "#7a3708", color: "#fff", padding: "36px 40px", fontSize: "40px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ background: "#7a3708", color: "#fff", padding: "36px 40px", fontSize: "40px", fontWeight: "800" }}>DANH MỤC SẢN PHẨM</div>}
           {(!isMobile || sidebarOpen) && <div style={{ padding: "36px 40px", fontWeight: "800", fontSize: "36px" }}>📘 CATALOGUE ĐÈN TRANG TRÍ</div>}
           {(!isMobile || sidebarOpen) && denTrangTri.map((item, index) => (
             <div
