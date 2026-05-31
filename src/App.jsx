@@ -25,6 +25,7 @@ const socialStyle = (bg) => ({
 
 function App() {
   const [selectedCatalogue, setSelectedCatalogue] = useState(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const isMobile = window.innerWidth <= 768;
 
   const products = [
@@ -111,11 +112,20 @@ function App() {
 
       {/* CONTENT */}
       <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "340px 1fr", gap: isMobile ? "0" : "30px", padding: isMobile ? "15px" : "40px" }}>
-        {/* SIDEBAR */}
-        <div style={{ background: "#fff", border: "1px solid #ddd" }}>
-          <div style={{ background: "#7a3708", color: "#fff", padding: "18px 20px", fontSize: "20px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>
-          <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px" }}>📘 CATALOGUE ĐÈN TRANG TRÍ</div>
-          {denTrangTri.map((item, index) => (
+        {/* SIDEBAR - on mobile: show toggle button, hide by default */}
+        <div style={{ background: "#fff", border: "1px solid #ddd", order: isMobile ? 2 : 0 }}>
+          {isMobile && (
+            <button
+              onClick={() => setSidebarOpen(o => !o)}
+              style={{ width: "100%", background: "#7a3708", color: "#fff", padding: "14px 20px", fontSize: "16px", fontWeight: "800", border: "none", textAlign: "left", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+            >
+              <span>📂 DANH MỤC SẢN PHẨM</span>
+              <span>{sidebarOpen ? "▲" : "▼"}</span>
+            </button>
+          )}
+          {(!isMobile || sidebarOpen) && <div style={{ background: "#7a3708", color: "#fff", padding: "18px 20px", fontSize: "20px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>}
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px" }}>📘 CATALOGUE ĐÈN TRANG TRÍ</div>}
+          {(!isMobile || sidebarOpen) && denTrangTri.map((item, index) => (
             <div
               key={index}
               onClick={() => {
@@ -142,19 +152,19 @@ function App() {
             </div>
           ))}
 
-          <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>💡 CATALOGUE CHIẾU SÁNG</div>
-          {chieuSang.map((item, index) => (
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>💡 CATALOGUE CHIẾU SÁNG</div>}
+          {(!isMobile || sidebarOpen) && chieuSang.map((item, index) => (
             <a key={index} href="#" style={{ display: "block", padding: "14px 30px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none" }}>{item}</a>
           ))}
 
-          <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>🔧 DỤNG CỤ & LINH KIỆN</div>
-          {linhKien.map((item, index) => (
+          {(!isMobile || sidebarOpen) && <div style={{ padding: "18px 20px", fontWeight: "800", fontSize: "18px", marginTop: "10px" }}>🔧 DỤNG CỤ & LINH KIỆN</div>}
+          {(!isMobile || sidebarOpen) && linhKien.map((item, index) => (
             <a key={index} href="#" style={{ display: "block", padding: "14px 30px", color: "#444", borderBottom: "1px solid #eee", textDecoration: "none" }}>{item}</a>
           ))}
         </div>
 
         {/* MAIN CONTENT */}
-        <div>
+        <div style={{ order: isMobile ? 1 : 0 }}>
           {selectedCatalogue ? (
             <div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
