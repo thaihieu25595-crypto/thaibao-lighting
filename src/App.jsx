@@ -25,6 +25,7 @@ const socialStyle = (bg) => ({
 
 function App() {
   const [selectedCatalogue, setSelectedCatalogue] = useState(null);
+  const isMobile = window.innerWidth <= 768;
 
   const products = [
     { name: "Đèn Hắt Tường TNT9", price: "104,000₫", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" },
@@ -54,31 +55,38 @@ function App() {
   return (
     <div style={{ fontFamily: "Tahoma, Arial, sans-serif", background: "#f5f5f5" }}>
       {/* TOP */}
-      <div style={{ background: "#111", color: "#fff", padding: "10px 40px", display: "flex", justifyContent: "space-between", fontSize: "14px" }}>
-        <div>THÁI BẢO-LIGHTING - Đèn trang trí cao cấp</div>
+      <div style={{ background: "#111", color: "#fff", padding: isMobile ? "8px 15px" : "10px 40px", display: "flex", justifyContent: "space-between", fontSize: "13px" }}>
+        <div>THÁI BẢO-LIGHTING</div>
         <div>Hotline: 0935 351 095</div>
       </div>
 
       {/* HEADER */}
-      <div style={{ background: "#fff", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", gap: "30px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "18px", minWidth: "420px" }}>
-          <img src="https://i.ibb.co/YTVmQgFZ/logo-thaibao.png" alt="THÁI BẢO-LIGHTING" style={{ width: "85px", height: "85px", objectFit: "contain" }} />
+      <div style={{ background: "#fff", display: "flex", alignItems: "center", justifyContent: "space-between", padding: isMobile ? "10px 15px" : "18px 40px", gap: isMobile ? "10px" : "30px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="https://i.ibb.co/YTVmQgFZ/logo-thaibao.png" alt="THÁI BẢO-LIGHTING" style={{ width: isMobile ? "55px" : "85px", height: isMobile ? "55px" : "85px", objectFit: "contain" }} />
           <div>
-            <div style={{ fontSize: "28px", fontWeight: "800", color: "#b67812", lineHeight: "34px", letterSpacing: "1px", whiteSpace: "nowrap" }}>THÁI BẢO-LIGHTING</div>
-            <div style={{ color: "#555", fontSize: "16px", marginTop: "4px" }}>Chuyên Cung Cấp Đèn Trang Trí</div>
+            <div style={{ fontSize: isMobile ? "18px" : "28px", fontWeight: "800", color: "#b67812", lineHeight: "1.2", letterSpacing: "0.5px" }}>THÁI BẢO-LIGHTING</div>
+            <div style={{ color: "#555", fontSize: isMobile ? "12px" : "16px", marginTop: "4px" }}>Chuyên Cung Cấp Đèn Trang Trí</div>
           </div>
         </div>
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <input type="text" placeholder="Tìm kiếm sản phẩm..." style={{ width: "100%", maxWidth: "520px", padding: "15px 18px", border: "1px solid #ccc", borderRadius: "8px", fontSize: "16px", outline: "none" }} />
-        </div>
-        <div style={{ textAlign: "right", minWidth: "220px" }}>
-          <div style={{ color: "#666", fontSize: "15px" }}>Hỗ trợ khách hàng</div>
-          <div style={{ color: "red", fontSize: "24px", fontWeight: "800", marginTop: "4px", whiteSpace: "nowrap" }}>0935 351 095</div>
+        {!isMobile && (
+          <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+            <input type="text" placeholder="Tìm kiếm sản phẩm..." style={{ width: "100%", maxWidth: "520px", padding: "15px 18px", border: "1px solid #ccc", borderRadius: "8px", fontSize: "16px", outline: "none" }} />
+          </div>
+        )}
+        <div style={{ textAlign: "right" }}>
+          <div style={{ color: "#666", fontSize: isMobile ? "12px" : "15px" }}>Hỗ trợ khách hàng</div>
+          <div style={{ color: "red", fontSize: isMobile ? "18px" : "24px", fontWeight: "800", marginTop: "4px", whiteSpace: "nowrap" }}>0935 351 095</div>
         </div>
       </div>
+      {isMobile && (
+        <div style={{ padding: "8px 15px", background: "#fff", borderTop: "1px solid #eee" }}>
+          <input type="text" placeholder="Tìm kiếm sản phẩm..." style={{ width: "100%", padding: "10px 14px", border: "1px solid #ccc", borderRadius: "8px", fontSize: "15px", outline: "none" }} />
+        </div>
+      )}
 
       {/* MENU */}
-      <div style={{ background: "#111", color: "#fff", display: "flex", alignItems: "center", gap: "28px", padding: "0 40px", fontWeight: "700", fontSize: "18px", overflowX: "auto", height: "56px", whiteSpace: "nowrap" }}>
+      <div style={{ background: "#111", color: "#fff", display: "flex", alignItems: "center", gap: isMobile ? "15px" : "28px", padding: isMobile ? "0 15px" : "0 40px", fontWeight: "700", fontSize: isMobile ? "14px" : "18px", overflowX: "auto", height: "50px", whiteSpace: "nowrap" }}>
         <a href="/" style={menuStyle}>🏠</a>
         <a href="/am-tran" style={menuStyle}>ÂM TRẦN ▼</a>
         <a href="/den-tuong" style={menuStyle}>ĐÈN TƯỜNG ▼</a>
@@ -93,16 +101,16 @@ function App() {
 
       {/* BANNER */}
       <div style={{ position: "relative" }}>
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop" alt="banner" style={{ width: "100%", height: "650px", objectFit: "cover" }} />
-        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", background: "rgba(0,0,0,0.45)", padding: "50px", borderRadius: "12px", textAlign: "center", color: "#fff", width: "70%" }}>
-          <h2 style={{ fontSize: "60px", margin: 0 }}>Kiến trúc không gian sống đẹp</h2>
-          <p style={{ fontSize: "28px", marginTop: "20px" }}>Hơn 500 mẫu đèn hiện đại và cao cấp</p>
-          <button style={{ marginTop: "20px", background: "#c58a11", border: "none", color: "#fff", padding: "18px 45px", fontSize: "20px", borderRadius: "8px", fontWeight: "700" }}>MUA NGAY</button>
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop" alt="banner" style={{ width: "100%", height: isMobile ? "220px" : "650px", objectFit: "cover" }} />
+        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", background: "rgba(0,0,0,0.45)", padding: isMobile ? "20px" : "50px", borderRadius: "12px", textAlign: "center", color: "#fff", width: isMobile ? "90%" : "70%" }}>
+          <h2 style={{ fontSize: isMobile ? "22px" : "60px", margin: 0 }}>Kiến trúc không gian sống đẹp</h2>
+          <p style={{ fontSize: isMobile ? "14px" : "28px", marginTop: isMobile ? "10px" : "20px" }}>Hơn 500 mẫu đèn hiện đại và cao cấp</p>
+          <button style={{ marginTop: isMobile ? "12px" : "20px", background: "#c58a11", border: "none", color: "#fff", padding: isMobile ? "10px 24px" : "18px 45px", fontSize: isMobile ? "14px" : "20px", borderRadius: "8px", fontWeight: "700" }}>MUA NGAY</button>
         </div>
       </div>
 
       {/* CONTENT */}
-      <div style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: "30px", padding: "40px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "340px 1fr", gap: isMobile ? "0" : "30px", padding: isMobile ? "15px" : "40px" }}>
         {/* SIDEBAR */}
         <div style={{ background: "#fff", border: "1px solid #ddd" }}>
           <div style={{ background: "#7a3708", color: "#fff", padding: "18px 20px", fontSize: "20px", fontWeight: "800" }}>DANH MỤC CATALOGUE</div>
@@ -171,7 +179,7 @@ function App() {
           ) : (
             <div>
               <h2 style={{ fontSize: "38px", marginBottom: "25px" }}>Sản phẩm nổi bật</h2>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "25px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,1fr)", gap: isMobile ? "12px" : "25px" }}>
                 {products.map((sp, index) => (
                   <div key={index} style={{ background: "#fff", border: "1px solid #ddd", borderRadius: "8px", overflow: "hidden" }}>
                     <img src={sp.image} alt={sp.name} style={{ width: "100%", height: "320px", objectFit: "cover" }} />
@@ -192,8 +200,8 @@ function App() {
       </div>
 
       {/* FOOTER */}
-      <div style={{ background: "#000", color: "#fff", padding: "60px 40px", marginTop: "60px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "60px" }}>
+      <div style={{ background: "#000", color: "#fff", padding: isMobile ? "30px 15px" : "60px 40px", marginTop: "40px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr", gap: isMobile ? "30px" : "60px" }}>
           <div>
             <h2 style={{ color: "yellow", marginBottom: "30px", fontSize: "32px" }}>HỖ TRỢ KHÁCH HÀNG</h2>
             {["Hướng dẫn mua hàng","Chính sách thanh toán","Chính sách bảo hành","Chính sách vận chuyển","Chính sách đổi trả"].map((item, i) => (
