@@ -113,7 +113,7 @@ function App() {
       {/* CONTENT */}
       <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "340px 1fr", gap: isMobile ? "0" : "30px", padding: isMobile ? "12px" : "40px" }}>
         {/* SIDEBAR */}
-        <div style={{ background: "#fff", border: "1px solid #ddd", order: isMobile ? 2 : 0 }}>
+        <div style={{ background: "#fff", border: "1px solid #ddd" }}>
           {isMobile && (
             <button onClick={() => setSidebarOpen(o => !o)} style={{ width: "100%", background: "#7a3708", color: "#fff", padding: "13px 16px", fontSize: "15px", fontWeight: "800", border: "none", display: "flex", justifyContent: "space-between", cursor: "pointer" }}>
               <span>📂 DANH MỤC CATALOGUE</span><span>{sidebarOpen ? "▲" : "▼"}</span>
@@ -160,7 +160,7 @@ function App() {
         </div>
 
         {/* MAIN CONTENT */}
-        <div style={{ order: isMobile ? 1 : 0 }}>
+        <div>
           {selectedCatalogue ? (
             <div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
