@@ -26,6 +26,7 @@ const socialStyle = (bg) => ({
 function App() {
   const [selectedCatalogue, setSelectedCatalogue] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [modalCatalogue, setModalCatalogue] = useState(null);
   const isMobile = window.innerWidth <= 768;
 
   const productGroups = [
@@ -147,8 +148,12 @@ function App() {
               key={index}
               onClick={() => {
                 if (item.embedUrl) {
-                  setSelectedCatalogue(item);
-                  window.scrollTo({ top: 600, behavior: "smooth" });
+                  if (isMobile) {
+                    setModalCatalogue(item);
+                  } else {
+                    setSelectedCatalogue(item);
+                    window.scrollTo({ top: 600, behavior: "smooth" });
+                  }
                 } else {
                   window.open(item.link, "_blank");
                 }
@@ -261,6 +266,43 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* CATALOGUE MODAL - hiện full màn hình điện thoại */}
+      {modalCatalogue && (
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 10000,
+          background: "#fff", display: "flex", flexDirection: "column"
+        }}>
+          {/* Header modal */}
+          <div style={{
+            background: "#7a3708", color: "#fff",
+            padding: "14px 16px",
+            display: "flex", alignItems: "center", justifyContent: "space-between",
+            flexShrink: 0
+          }}>
+            <div style={{ fontSize: "16px", fontWeight: "800", flex: 1, marginRight: "12px" }}>
+              📖 {modalCatalogue.name}
+            </div>
+            <button
+              onClick={() => setModalCatalogue(null)}
+              style={{
+                background: "rgba(255,255,255,0.2)", border: "none", color: "#fff",
+                width: "36px", height: "36px", borderRadius: "50%",
+                fontSize: "18px", cursor: "pointer", fontWeight: "700",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                flexShrink: 0
+              }}
+            >✕</button>
+          </div>
+          {/* Iframe full màn hình */}
+          <iframe
+            src={modalCatalogue.embedUrl}
+            style={{ flex: 1, border: "none", width: "100%", display: "block" }}
+            allowFullScreen
+            title={modalCatalogue.name}
+          />
+        </div>
+      )}
 
       {/* CALL + ZALO */}
       <div style={{ position: "fixed", right: "20px", bottom: "30px", display: "flex", flexDirection: "column", gap: "16px", zIndex: 9999 }}>
