@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+﻿import { useState, useRef, useEffect } from "react";
 
 const CATALOGUES_TRANG_TRI = [
   { name: "ĐÈN TRANG TRÍ ANDORA LIGHT", img: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=300&q=80" },
@@ -295,26 +295,6 @@ export default function App() {
                 <div className="cat-card" key={i} onClick={()=>gotoShop("den-trang-tri")}>
                   <div className="cat-card-img"><img src={c.img} alt={c.name}/></div>
                   <div className="cat-card-body"><div className="cat-card-name">{c.name}</div><button className="cat-card-btn">XEM CATALOGUE</button></div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="section" style={{background:"#fff",marginTop:8}}>
-            <div className="section-header"><h2 className="section-title">✨ SẢN PHẨM NỔI BẬT</h2><button className="see-all" onClick={()=>gotoShop("den-trang-tri")}>Xem tất cả</button></div>
-            <div className="prod-grid">
-              {PRODUCTS.slice(0,8).map(p=>(
-                <div className="prod-card" key={p.id} onClick={()=>{setDetail(p);setDqty(1);}}>
-                  {p.tag&&<div className="prod-tag">{p.tag}</div>}
-                  <div className="prod-img"><img src={p.img} alt={p.name}/></div>
-                  <div className="prod-body">
-                    <div className="prod-name">{p.name}</div>
-                    <div className="prod-desc">{p.desc}</div>
-                    <div className="prod-price"><span className="price-main">{fmt(p.price)}</span>{p.originalPrice&&<span className="price-orig">{fmt(p.originalPrice)}</span>}</div>
-                    <div className="prod-actions">
-                      <button className="btn-cart" onClick={e=>{e.stopPropagation();addCart(p);}}>🛒 Giỏ hàng</button>
-                      <button className="btn-buy" onClick={e=>{e.stopPropagation();window.open("tel:0935351095");}}>Mua ngay</button>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
