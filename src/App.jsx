@@ -465,11 +465,6 @@ export default function App() {
           <div className="pdf-modal" onClick={e=>e.stopPropagation()}>
             <div className="pdf-header">
               <div className="pdf-title">📖 {pdfViewer.name}</div>
-              <div className="pdf-actions">
-                <a href={`https://drive.google.com/file/d/${pdfViewer.pdf}/view`} target="_blank" rel="noreferrer">
-                  <button className="pdf-btn">🔗 Mở tab mới</button>
-                </a>
-              </div>
               <button className="pdf-close" onClick={()=>setPdfViewer(null)}>✕</button>
             </div>
             <iframe
