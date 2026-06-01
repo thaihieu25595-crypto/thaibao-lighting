@@ -1,16 +1,16 @@
 ﻿import { useState, useRef, useEffect } from "react";
 
 const CATALOGUES_TRANG_TRI = [
-  { name: "ĐÈN TRANG TRÍ ANDORA LIGHT 2025", img: "/catalogue/andora.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ VERONIA LIGHTING 2026", img: "/catalogue/veronia.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ 355 LIGHTING", img: "/catalogue/355.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ HUFA LIGHTING", img: "/catalogue/hufa.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ SLISTER A 2024", img: "/catalogue/slister.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ 79 LIGHTING 2025", img: "/catalogue/79light.jpg", pdf: "#" },
-  { name: "QUẠT TRẦN QVIFA FAN 2026", img: "/catalogue/qvifa.jpg", pdf: "#" },
-  { name: "ĐÈN TRANG TRÍ SANO LIGHTING", img: "/catalogue/sano.jpg", pdf: "#" },
-  { name: "PTH LIGHTING HOME 2026", img: "/catalogue/pth_lighting.jpg", pdf: "#" },
-  { name: "CTL-VIRGO LIGHTING 2024", img: "/catalogue/ctl-virgo_20.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ ANDORA LIGHT 2025", img: "/catalogue/andora.jpg", pdf: "1e9CwAhTaAWgy-EWe9vnnR4y802OB4CYU" },
+  { name: "ĐÈN TRANG TRÍ VERONIA LIGHTING 2026", img: "/catalogue/veronia.jpg", pdf: "15zo5zQPDJcH9RIFCtA9x4ATTsGM9lwk6" },
+  { name: "ĐÈN TRANG TRÍ 355 LIGHTING", img: "/catalogue/355.jpg", pdf: "1ErboZhxxQZORl_D53oyYq5roroEG33SL" },
+  { name: "ĐÈN TRANG TRÍ HUFA LIGHTING", img: "/catalogue/hufa.jpg", pdf: "1GExOEbMzQ5kL4CHBPSCuZL6KPOEZgTp6" },
+  { name: "ĐÈN TRANG TRÍ SLISTER A 2024", img: "/catalogue/slister.jpg", pdf: "1XXHxGtK8tIIbNSZRucvxhdnyEboLJ8Bq" },
+  { name: "ĐÈN TRANG TRÍ 79 LIGHTING 2025", img: "/catalogue/79light.jpg", pdf: "1p65Yj7dxLoAek-MHQyfCGFtPKEWJEMT_" },
+  { name: "QUẠT TRẦN QVIFA FAN 2026", img: "/catalogue/qvifa.jpg", pdf: "1utRhIdN947migF7L_5O1Q6ljIKbutABK" },
+  { name: "ĐÈN TRANG TRÍ SANO LIGHTING", img: "/catalogue/sano.jpg", pdf: "1Z2FFPv7fMTP_qE4R64qBaTOrOgjNqz0P" },
+  { name: "PTH LIGHTING HOME 2026", img: "/catalogue/pth_lighting.jpg", pdf: "1RmSDNgPrO5p1C2C3YVkchFjCTddrSMkO" },
+  { name: "CTL-VIRGO LIGHTING 2024", img: "/catalogue/ctl-virgo_20.jpg", pdf: "1XngZt99pMG6_AfBPB3EIIMcSJ5Kdp6dE" },
 ];
 const CATALOGUES_CHIEU_SANG = [
   { name: "PANASONIC", img: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=300&q=80" },
@@ -197,6 +197,18 @@ body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);}
 .contact-form input,.contact-form textarea{width:100%;border:1.5px solid var(--border);border-radius:6px;padding:11px 14px;font-size:13px;font-family:inherit;margin-bottom:12px;outline:none;}
 .contact-form textarea{height:100px;resize:none;}
 .contact-submit{width:100%;background:var(--blue);color:#fff;border:none;padding:13px;border-radius:6px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+
+.pdf-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:700;display:flex;align-items:center;justify-content:center;padding:16px;}
+.pdf-modal{background:#fff;border-radius:10px;width:100%;max-width:960px;height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.pdf-header{background:var(--blue);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.pdf-title{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;flex:1;margin-right:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.pdf-actions{display:flex;gap:8px;flex-shrink:0;}
+.pdf-btn{background:rgba(255,255,255,.2);color:#fff;border:none;padding:7px 14px;border-radius:5px;cursor:pointer;font-size:12px;font-weight:600;transition:background .2s;font-family:inherit;}
+.pdf-btn:hover{background:rgba(255,255,255,.35);}
+.pdf-close{background:rgba(255,255,255,.2);color:#fff;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.pdf-close:hover{background:rgba(255,255,255,.4);}
+.pdf-frame{flex:1;border:none;width:100%;}
+@media(max-width:640px){.pdf-modal{height:95vh;border-radius:8px;}.pdf-title{font-size:12px;}}
 @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}.about-grid{grid-template-columns:1fr 1fr;}.contact-grid{grid-template-columns:1fr;}.modal-grid{grid-template-columns:1fr;}.modal-img{border-radius:12px 12px 0 0;height:250px;}}
 @media(max-width:640px){.header{flex-wrap:wrap;padding:10px 12px;gap:10px;}.search-wrap{order:3;max-width:100%;width:100%;}.navbar{top:0;}.banner-wrap{height:260px;}.banner-content{padding:0 20px;}.banner-title{font-size:24px;}.benefits{flex-direction:column;}.prod-grid{grid-template-columns:1fr 1fr;}.cat-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr;}.about-grid{grid-template-columns:1fr;}}
 `;
@@ -210,6 +222,7 @@ export default function App() {
   const [dqty, setDqty] = useState(1);
   const [toast, setToast] = useState(null);
   const [bannerIdx, setBannerIdx] = useState(0);
+  const [pdfViewer, setPdfViewer] = useState(null);
   const [search, setSearch] = useState("");
   const timer = useRef(null);
 
@@ -294,7 +307,7 @@ export default function App() {
             <div className="section-header"><h2 className="section-title">📖 CATALOGUE ĐÈN TRANG TRÍ</h2><button className="see-all" onClick={()=>setPage("catalogue")}>Xem tất cả</button></div>
             <div className="cat-grid">
               {CATALOGUES_TRANG_TRI.map((c,i)=>(
-                <div className="cat-card" key={i} onClick={()=>gotoShop("den-trang-tri")}>
+                <div className="cat-card" key={i} onClick={()=>c.pdf&&c.pdf!=="#"?setPdfViewer(c):gotoShop("den-trang-tri")}>
                   <div className="cat-card-img"><img src={c.img} alt={c.name}/></div>
                   <div className="cat-card-body"><div className="cat-card-name">{c.name}</div><button className="cat-card-btn">XEM CATALOGUE</button></div>
                 </div>
@@ -352,8 +365,8 @@ export default function App() {
         </div>
         <div className="section-header" style={{marginBottom:20}}><h2 className="section-title">💡 CATALOGUE CHIẾU SÁNG</h2></div>
         <div className="cat-grid">{CATALOGUES_CHIEU_SANG.map((c,i)=>(
-          <div className="cat-card" key={i}><div className="cat-card-img"><img src={c.img} alt={c.name}/></div>
-          <div className="cat-card-body"><div className="cat-card-name">{c.name}</div><button className="cat-card-btn">📥 XEM / TẢI CATALOGUE</button></div></div>
+          <div className="cat-card" key={i} onClick={()=>c.pdf&&c.pdf!=="#"&&setPdfViewer(c)}><div className="cat-card-img"><img src={c.img} alt={c.name}/></div>
+          <div className="cat-card-body"><div className="cat-card-name">{c.name}</div><button className="cat-card-btn">📖 XEM CATALOGUE</button></div></div>
         ))}</div>
       </div>}
 
@@ -445,6 +458,29 @@ export default function App() {
           </div>
         </div>
       </div>}
+
+      
+      {pdfViewer && (
+        <div className="pdf-overlay" onClick={()=>setPdfViewer(null)}>
+          <div className="pdf-modal" onClick={e=>e.stopPropagation()}>
+            <div className="pdf-header">
+              <div className="pdf-title">📖 {pdfViewer.name}</div>
+              <div className="pdf-actions">
+                <a href={`https://drive.google.com/file/d/${pdfViewer.pdf}/view`} target="_blank" rel="noreferrer">
+                  <button className="pdf-btn">🔗 Mở tab mới</button>
+                </a>
+              </div>
+              <button className="pdf-close" onClick={()=>setPdfViewer(null)}>✕</button>
+            </div>
+            <iframe
+              className="pdf-frame"
+              src={`https://drive.google.com/file/d/${pdfViewer.pdf}/preview`}
+              allow="autoplay"
+              title={pdfViewer.name}
+            />
+          </div>
+        </div>
+      )}
 
       {toast&&<div className="toast">✓ {toast}</div>}
     </>
