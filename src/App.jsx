@@ -1,14 +1,16 @@
 ﻿import { useState, useRef, useEffect } from "react";
 
 const CATALOGUES_TRANG_TRI = [
-  { name: "ĐÈN TRANG TRÍ ANDORA LIGHT", img: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ VERONIA LIGHTING", img: "https://images.unsplash.com/photo-1513506003901-1e6a35f09b15?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ 355 LIGHTING", img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ HUFA LIGHTING", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ SLISTER A", img: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ 79 LIGHTING", img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&q=80" },
-  { name: "QUẠT ĐÈN QVIFA FAN", img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?w=300&q=80" },
-  { name: "ĐÈN TRANG TRÍ SANO LIGHTING", img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&q=80" },
+  { name: "ĐÈN TRANG TRÍ ANDORA LIGHT 2025", img: "/catalogue/andora.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ VERONIA LIGHTING 2026", img: "/catalogue/veronia.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ 355 LIGHTING", img: "/catalogue/355.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ HUFA LIGHTING", img: "/catalogue/hufa.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ SLISTER A 2024", img: "/catalogue/slister.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ 79 LIGHTING 2025", img: "/catalogue/79light.jpg", pdf: "#" },
+  { name: "QUẠT TRẦN QVIFA FAN 2026", img: "/catalogue/qvifa.jpg", pdf: "#" },
+  { name: "ĐÈN TRANG TRÍ SANO LIGHTING", img: "/catalogue/sano.jpg", pdf: "#" },
+  { name: "PTH LIGHTING HOME 2026", img: "/catalogue/pth_lighting.jpg", pdf: "#" },
+  { name: "CTL-VIRGO LIGHTING 2024", img: "/catalogue/ctl-virgo_20.jpg", pdf: "#" },
 ];
 const CATALOGUES_CHIEU_SANG = [
   { name: "PANASONIC", img: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=300&q=80" },
@@ -59,8 +61,8 @@ body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);}
 .topbar a:hover{opacity:1;}
 .header{background:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:0;z-index:200;}
 .logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;}
-.logo-img{width:52px;height:52px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;font-family:'Montserrat',sans-serif;text-align:center;line-height:1.2;}
-.logo-name{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:var(--blue);line-height:1;}
+.logo-img{width:58px;height:58px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;font-family:'Montserrat',sans-serif;text-align:center;line-height:1.2;}
+.logo-name{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--blue);line-height:1.1;white-space:nowrap;}
 .logo-name span{color:var(--red);}
 .logo-slogan{font-size:10px;color:var(--muted);margin-top:2px;}
 .search-wrap{flex:1;display:flex;max-width:600px;}
@@ -238,7 +240,7 @@ export default function App() {
       </div>
       <header className="header">
         <div className="logo" onClick={()=>setPage("home")}>
-          <div className="logo-img">THÁI<br/>BẢO</div>
+          <div className="logo-img" style={{fontSize:"8px",letterSpacing:"0.02em",lineHeight:"1.4"}}>THÁI BẢO<br/>LIGHTING</div>
           <div><div className="logo-name">THÁI BẢO <span>LIGHTING</span></div><div className="logo-slogan">Chiếu sáng chuyên nghiệp</div></div>
         </div>
         <div className="search-wrap">
